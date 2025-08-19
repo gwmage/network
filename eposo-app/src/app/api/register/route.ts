@@ -47,9 +47,7 @@ export async function POST(request: Request) {
       },
     });
 
-    // Redirect to login page after successful registration
     return NextResponse.redirect(new URL("/login", request.url), { status: 302 });
-
 
   } catch (error) {
     console.error("REGISTRATION_ERROR", error);
